@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="content" style="margin: 0 auto; width: 70%">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        var converter = new showdown.Converter();
+
+        var md = 
+            '# Título da Noticia \n' +
+            '## Subtílulo da noticia com mais informações \n' +
+            'Primeiro parágrafo da notícia Primeiro parágrafo da notícia Primeiro parágrafo da notícia Primeiro parágrafo da notícia Primeiro parágrafo da notícia Primeiro parágrafo da notícia Primeiro parágrafo da notícia. \n\n' +
+            'Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo Segundo parágrafo. \n';
+        
+        var textHtml = converter.makeHtml(md);
+
+        var content = document.querySelector("#content").innerHTML = textHtml;
+
+    </script>
+</body>
+</html>
